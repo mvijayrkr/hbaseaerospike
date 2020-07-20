@@ -1,0 +1,11 @@
+#old schema
+INSERT INTO test.edsf (pk,policyid,service,eventtime,eventupdatetime,requesteduser,tablename,accessresource,accessperm,
+accesstype,accessenforcer,	cntrycode,bu,profile,eventts)
+VALUES ('hive_user1_table1_access','hive_user1_table1_access','hive','2020-4-30 15:15:01','2020-4-30 15:15:01','user1',
+'table1','ns,table,cf,cq,cl','read,write,execute,create,admin','allow','access','in','edsf','na',1588600821852)
+
+#Indexing on the EventTime
+CREATE INDEX EventTime_idx ON test.edsf(EventTime) DATE
+
+
+#new schema
